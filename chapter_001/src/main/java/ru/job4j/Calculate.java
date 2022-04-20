@@ -14,13 +14,13 @@ public class Calculate {
      */
     public static void main(String[] args) {
         System.out.println("Calculate...");
-		double first = Double.valueOf(arg[0]);
-		double second = Double.valueOf(arg[1]);
+		double first = Double.valueOf(args[0]);
+		double second = Double.valueOf(args[1]);
 		System.out.println(String.format("%s + %s = %s", first, second, add(first, second)));
 		System.out.println(String.format("%s - %s = %s", first, second, substract(first, second)));
 		System.out.println(String.format("%s * %s = %s", first, second, multiple(first, second)));
 		System.out.println(String.format("%s / %s = %s", first, second, div(first, second)));
-		System.out.println(String.format("%s ^ %s = %s", first, second, expand(first, (int) second)));
+		System.out.println(String.format("%s ^ %s = %s", first, second, expand((int) first, (int) second)));
     }
 	/**
      * Сложение
@@ -64,8 +64,8 @@ public class Calculate {
 	 * @param second второй аргумент;
 	 * @param return степень;
      */
-	public static double expand(double first, double second) {
-		return first ^ second;
-	}
+	public static double expand(int first, int second) {
+        return first ^ second;
+    }
 	
 }
